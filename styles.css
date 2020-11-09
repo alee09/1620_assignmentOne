@@ -1,0 +1,126 @@
+body{
+    --mint: RGB(68, 187, 164);
+    --platinum: RGB(231, 229, 223);
+    --timberwolf: RGB(211, 208, 203);
+    --blue :RGB(5, 122, 168);
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.indexpage{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 3fr;
+    height: 100vh;
+    grid-template-areas:
+        "header"
+        "sidebar"
+        "content"
+        "footer";
+}
+
+.header{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    grid-area: header;
+    background-color:var(--mint);
+    border-bottom: 2px;
+    margin-bottom: 5px;
+}
+
+.sidebar{
+    background-color: var(--platinum);
+    grid-area: sidebar;
+    margin: 4px;
+    margin-left: 0;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.sidebar > h2 {
+    margin-left: 10px;
+}
+.main {
+    grid-area: content;
+    background-color: var(--timberwolf);
+    margin: 4px;
+    margin-right: 0;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.button {
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 0;
+    margin: 10px;
+}
+.note_buttons {
+    display: flex;
+    justify-content: center;
+}
+.text {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+footer { 
+    display: flex; 
+    grid-area: footer;
+    align-items: center; 
+    justify-content: center; 
+    background-color: var(--blue);
+  } 
+/* .footer_message {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    grid-area: footer;
+}
+
+.social_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.img {
+    width: 50px;
+    height: 50px;
+}
+
+@media screen and (min-width: 550px) {
+    .indexpage {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        grid-template-rows: 125px 1fr 125px;
+        height: 100vh;
+        grid-template-areas: 
+            "header  header"
+            "sidebar content"
+            "footer  footer";
+    }
+    .header{
+        border-bottom: 2px;
+        margin-bottom: 5px;
+    }
+    .sidebar{
+        background-color: var(--platinum);
+        margin: 4px;
+        border-radius: 10px;
+        margin-left: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border: 0;
+    }
+    .main{
+        margin-right: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
