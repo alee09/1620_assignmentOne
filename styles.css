@@ -74,6 +74,7 @@ body{
     margin-bottom: 5px;
     margin-left: 10px;
     border-radius: 10px;
+    font-size: 15px;
 }
 footer { 
     display: flex; 
@@ -106,10 +107,11 @@ darkmode
 */
 .body_dark {
     --darkbackground: RGB(12,12,12);
-    --dark-whitetext: RGB(140, 143, 163);
+    --dark-whitetext: rgb(171, 173, 187);
     --dark-headfoot: RGB(8, 18, 84);
-    --dark-greybackground: RGB(48, 47, 47);
+    --dark-greybackground: rgb(39, 39, 39);
     --dark-mainbackground: RGB(138, 135, 135);
+    background-color: var(--darkbackground);
 }
 
 .Head_Foot_dark{
@@ -119,7 +121,7 @@ darkmode
 
 .sidebar_dark{
     background-color: var(--dark-greybackground);
-    color: rgb(172, 169, 169);
+    color: rgb(112, 112, 112);
 }
 
 .btn_dark{
@@ -128,8 +130,9 @@ darkmode
     
 }
 .textarea_dark{
+    border-color: grey;
     background-color: grey;
-    color: var(--dark-whitetext);
+    color: white;
 }
 .main_dark{
     background-color: var(--dark-mainbackground);

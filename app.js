@@ -30,11 +30,6 @@ save.addEventListener("click", () =>{
     //adds to sidebar
     let notelist = document.querySelector(".noteList");
     let newli = document.createElement('li');
-    // let newlibtn = document.createElement('button');
-    // newlibtn.classList.add("button")
-    // if(islight = false){
-    //     newlibtn.classList.add("btn_dark")
-    // }
     newli.innerHTML = title
     notelist.appendChild(newli)
 })
@@ -51,12 +46,13 @@ cancel.addEventListener("click", ()=> {
 
 //to add an event where when the theme button is pressed it will change accordingly.
 darkBtn.addEventListener("click", () =>{
-    const body = document.querySelector(".body")
+    const body = document.querySelector("body")
     const header = document.querySelector(".header")
     const sidebar = document.querySelector(".sidebar")
-    const footer = document.querySelector(".footer")
+    const footer = document.querySelector("footer")
     const buttons = document.querySelector(".button")
-    const textarea = document.querySelector(".textarea")
+    const textarea = document.querySelector("textarea")
+    const main = document.querySelector(".main")
 
     body.classList.toggle("body_dark")
     header.classList.toggle("Head_Foot_dark")
