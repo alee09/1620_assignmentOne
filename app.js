@@ -1,4 +1,4 @@
-const lightBtn = document.querySelector(".theme");
+const darkBtn = document.querySelector(".theme");
 const newNoteBtn = document.querySelector(".newNote");
 const notes = document.querySelector(".note");
 const cancel = document.querySelector(".cancel");
@@ -15,18 +15,28 @@ let islight = true
 //save button is pressed. adds to the notearray.
 save.addEventListener("click", () =>{
     const lines = document.querySelector('.textarea').innerHTML.split('\n');
-    notesArray.title.push(lines[0])
-    const title = lines.splice(0)
+    let temp = {}
+    temp.title = lines[0].toLowerCase()
+    temp.body = ''
+    let title = lines[0] 
+    lines.splice(0)
     let arraybody = lines.join('\n');
-        for(let i = 0; lines.length(); i++){
-            if(notesArray[i].title == title){
-                notesArray[i].body = arraybody
-            }
-        }
+    for(let i = 0; lines.length; i++){
+        temp.body += '${lines[i]}\n'
+    }
+    notesArray.push(temp)
+    console.log(notesArray)
+
+    //adds to sidebar
     let notelist = document.querySelector(".noteList");
     let newli = document.createElement('li');
-    li.textContent = title
-    notelist.insertAfter(li, notelist.lastChild);
+    // let newlibtn = document.createElement('button');
+    // newlibtn.classList.add("button")
+    // if(islight = false){
+    //     newlibtn.classList.add("btn_dark")
+    // }
+    newli.innerHTML = title
+    notelist.appendChild(newli)
 })
 
 //shows textarea + save button + cancel button when pressed
@@ -35,7 +45,7 @@ newNoteBtn.addEventListener("click", () =>{
     document.querySelector(".textarea").value = "";
 })
 //hides textarea + save button + cancel butotn when pressed.
-cancelButton.addEventListener("click", ()=> {
+cancel.addEventListener("click", ()=> {
     notes.style.display = "none";
 })
 
